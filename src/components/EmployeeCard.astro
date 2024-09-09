@@ -15,17 +15,49 @@ if (!images[img])
 ---
 
 <article>
-  <h2>{name}</h2>
-  <h3>{title}</h3>
-  <p>{description}</p>
-  <Image src={images[img]()} alt={name} />
+  <div class="image-title">
+    <Image src={images[img]()} alt={name} width={100} />
+    <p class="employees-title">{title}</p>
+  </div>
+  <div class="text">
+    <h5 class="employees-name">{name}</h5>
+    <p class="employees-content">{description}</p>
+  </div>
 </article>
 
 <style>
-  @layer components {
-    article {
-      color: var(--text-card);
-      background: var(--bg-card);
+    @layer components {
+      article {
+        display: grid;
+        gap: 25px;
+        
+        .image-title {
+          position: relative;
+          img {
+            border-radius: 20px;
+          }
+        
+        
+      }
+      &:first-child  .employees-title {
+          background: var(--primary-color);
+          color: var(--tertiary-color);
+        }
+      .employees-title {
+        padding: 4px 20px;
+        position: absolute;
+        background: var(--tertiary-color);
+        border-radius: 100px;
+        bottom: 20px;
+        right: 20px;
+        color: var(--white-color);
+        }
+      .text {
+        text-align: center;
+        display: grid;
+        gap: 8px;
+  
+      }
     }
   }
 </style>

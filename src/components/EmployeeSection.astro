@@ -1,30 +1,57 @@
 ---
 import EmployeeCard from "./EmployeeCard.astro";
 
-const { data, theme = "light" } = Astro.props;
+const { data } = Astro.props;
 ---
 
-<section data-theme={theme}>
-  {data.map((employee) => <EmployeeCard {employee} />)}
+<section class="employees-wrap">
+  <div class="top">
+    <div class="text">
+      <h1>Meet Our Great Team</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation.</p>
+    </div>
+      <a class="btn-primary" href="#">Join our teams</a>
+  </div>
+  <section class="employees">
+    {
+      data.map(employee => <EmployeeCard employee={employee}/>)
+    }
+
+
+  </section>
 </section>
+
+
+
+
 
 <style>
   @layer components {
-    [data-theme="dark"] {
-      --bg-section: red;
-      --text-section: #fff;
-      --bg-card: blue;
-      --text-card: #fff;
-    }
+      .employees-wrap {
+        display: grid;
+        gap: 40px;
+        margin-bottom: 50px;
+        
+        .top {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
 
-    section {
-      --bg-section: #fff;
-      --text-section: red;
-      --bg-card: #fff;
-      --text-card: blue;
-      padding: 2rem;
-      color: var(--text-section);
-      background: var(--bg-section);
-    }
+
+          .text {
+            max-width: 50%;
+            display: grid;
+            gap: 16px;
+          }
+        }
+
+        .employees {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          row-gap: 80px;
+          column-gap: 50px;
+        }
+      }
   }
+
 </style>

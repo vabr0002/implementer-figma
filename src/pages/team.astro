@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import HeroBackground from "../components/HeroBackground.astro";
+
+import EmployeeSection from "../components/EmployeeSection.astro";
+
+const employeeData = await fetch("https://raw.githubusercontent.com/vabr0002/frontend-design/main/resources/json/employees.json").then((res) => res.json());
+---
+
+<BaseLayout title="Team">
+<HeroBackground surface="team" tag="TEAM" headline="The Consultors"/>
+<EmployeeSection data={employeeData}/>
+</BaseLayout>

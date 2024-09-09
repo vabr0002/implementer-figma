@@ -1,0 +1,51 @@
+---
+const { surface = 'team', tag, headline } = Astro.props;
+---
+
+<div data-surface={surface} class="hero full">
+  <div class="content">
+    <div class="content-background">
+        <div class="tag">
+            <p>{tag}</p>
+        </div>
+        <h1>{headline}</h1>
+    </div>
+  </div>
+</div>
+
+
+<style>
+  @layer components {
+    [data-surface="team"] {
+      --background-image: url("src/assets/images/hero-team.png");  
+    }
+    
+    [data-surface="about"] {
+      --background-image: url("src/assets/images/hero-about.png");  
+    }
+
+    [data-surface="case"] {
+      --background-image: url("src/assets/images/hero-case.png");  
+    }
+    .hero {
+            background-image: var(--background-image);
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 9rem 0;
+            .content-background {
+                border-radius: 29px;
+                background: rgba(255, 255, 255, 0.85);
+                backdrop-filter: blur(5.5px);
+                display: inline-block;
+                padding: 3rem 3.75rem;
+                max-width: 790px;
+                .tag {
+                    padding: 0px 15px;
+                    background: var(--primary-color);
+                    display: inline-block;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+    </style>
