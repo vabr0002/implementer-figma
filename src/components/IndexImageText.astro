@@ -1,0 +1,121 @@
+---
+
+const { side = 'left', tag, heading, text, listOne, listTwo, imgUrl } = Astro.props;
+
+---
+
+<div data-side={side} class="img-text">
+    <div class="img-wrap">
+        <img src={imgUrl}>
+    </div>
+    <div class="text-wrapper">
+        <p class="tag">{tag}</p>
+        <h2>{heading}</h2>
+        <p class="text">{text}</p>
+        <ul>
+            {listOne && (
+                <li>{listOne}</li>
+              )}
+             {listTwo && (
+                <li>{listTwo}</li>
+              )}
+        </ul>
+    </div>
+    
+
+</div>
+
+<style>
+    @layer components {
+
+        [data-side="left"] {
+            --image-side: 0;
+            --element-green-left: -30px;
+            --element-dots-left: -80px;
+            --tag-bg: var(--primary-color);
+            --tag-text-color: var(--body-text);
+        }
+
+        [data-side="right"] {
+            --image-side: 1;
+            --element-green-left: 450px;
+            --element-dots-left: 350px;;
+            --tag-bg: var(--secondary-color);
+            --tag-text-color: var(--white-color );
+        }
+
+        .img-text {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5rem;
+            height: 460px;
+            margin: 20px;
+            .img-wrap {
+                position: relative;
+                order: var(--image-side);
+                img {
+                    height: 80%;
+                    display: flex;
+                    object-fit: cover;
+                    border-radius: 20px;
+                    position: absolute;
+                    bottom: 0;
+                    z-index: 3;
+                }
+                &::before {
+                    opacity: 0.8;
+                    --square-count: 14;
+                    --square-size: 1.34rem;
+                    --_square-size: var(--square-size, 1rem);
+                    --_square-half: calc(var(--square-size) / 2);
+                    --_square-sum: calc(var(--square-count)* var(--square-size));
+                    z-index: 2;
+                    content: "";
+                    position: absolute;
+                    inline-size: calc(round(var(--_square-sum), var(--_square-size)) - var(--_square-half));
+                    aspect-ratio: 1;
+                    background: linear-gradient(135deg, #BE965D, #976F40, #C99B61, #F0BE7B, #FFCB85, #EEBC79, #C0935B, #976F40) 0 0 / 100% 100%;
+                    mask: var(--square-pattern) 0 0 / var(--_square-size) var(--_square-size), var(--square-pattern) var(--_square-half) var(--_square-half) / var(--_square-size) var(--_square-size);
+                    left: var(--element-dots-left);
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background: var(--secondary-color);
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 20px;
+                    z-index: 2;
+                    left: var(--element-green-left);
+                    top: 60px;
+                }
+            }
+            .text-wrapper {
+                .text {
+                    margin-top: 16px;
+                }
+                .tag {
+                    padding: 0px 15px;
+                    background: var(--tag-bg);
+                    display: inline-block;
+                    border-radius: 20px;
+                    margin-bottom: 16px;
+                    color: var(--tag-text-color);
+                }
+                ul {
+                    margin-top: 24px;
+                    list-style: none;
+                    padding: 0;
+                    li {
+                        display: flex;
+                        gap: 10px;
+                        &::before {
+                            content: url("../icons/tick.svg");
+                            margin-top: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+</style>

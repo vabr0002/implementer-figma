@@ -1,0 +1,95 @@
+---
+
+---
+
+<section class="full">
+    <div class="hero">
+        <div class="left">
+            <h1>Adam Buschemia Business Consultant</h1>
+            <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+            <div class="btn-secondary">Book a Meeting</div>
+        </div>
+        <div class="right">
+            <img src="../src/assets/images/sarah.jpg" alt="">
+        </div>
+    </div>
+    <div class="boxes">
+        <div class="box box-1">
+            <h6>Finance & Restructuring</h6>
+            <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+            <a class="btn-primary">Our Services</a>
+        </div>
+        <div class="box box-2">
+            <h6>Our Approach</h6>
+            <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+            <a class="btn-primary">More About </a>
+        </div>
+        <div class="box box-3">
+            <h6>Consultalk Result</h6>
+            <p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+            <a class="btn-primary">Explore Our Solution</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        background: var(--tertiary-color);
+        position: relative;
+        max-height: 600px;
+        margin-bottom: 12.5rem;
+        .hero{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column: 2 / -1;
+            gap: 70px;
+            .left {
+                align-content: center;
+                z-index: 2;
+                p {
+                    margin: 20px 0;
+                }
+            }
+            .right {
+                img {
+                    max-height: 600px;
+                    object-fit: cover;
+
+                    z-index: 5;
+                    position: relative;
+                }
+            }
+            h1 {
+                color: var(--white-color);
+            }
+            p {
+                color: var(--white-color);
+            }
+        }
+        .boxes {
+            display: flex;
+            gap: 1rem;
+            position: relative;
+            z-index: 100;
+            bottom: 8rem;
+            .box {
+                padding: 3rem;
+                background: rgba(38, 38, 38, 0.90);
+                backdrop-filter: blur(16px);
+                border-radius: 20px;
+                h6 {
+                    color: var(--white-color);
+                    margin-bottom: 10px;
+                }
+                p {
+                    color: var(--white-color);
+                }
+                .btn-primary {
+                    margin-top: 36px;
+                    cursor: pointer;
+                }
+            }
+        }
+  
+    }
+</style>
