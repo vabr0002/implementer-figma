@@ -1,9 +1,9 @@
 ---
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
-
+import { Icon } from 'astro-icon/components'
 const { employee } = Astro.props;
-const { img, name, title, description } = employee;
+const { img, name, title, description, some_icon } = employee;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/images/*.{jpeg,jpg,png,gif}"
@@ -23,6 +23,14 @@ if (!images[img])
     <h5 class="employees-name">{name}</h5>
     <p class="employees-content">{description}</p>
   </div>
+  <div class="some_icons">
+    <img src="src/icons/instagram.svg" alt="Instagram logo">
+    <img src="src/icons/facebook.svg" alt="Facebook logo">
+    <img src="src/icons/twitter.svg" alt="Twitter logo">
+
+  
+  </div>
+
 </article>
 
 <style>
@@ -33,16 +41,11 @@ if (!images[img])
         
         .image-title {
           position: relative;
+          cursor: pointer;
           img {
             border-radius: 20px;
           }
-        
-        
       }
-      &:first-child  .employees-title {
-          background: var(--primary-color);
-          color: var(--tertiary-color);
-        }
       .employees-title {
         padding: 4px 20px;
         position: absolute;
@@ -52,12 +55,35 @@ if (!images[img])
         right: 20px;
         color: var(--white-color);
         }
+
+
+        &:hover .employees-title {
+          background: var(--primary-color);
+          color: var(--tertiary-color);
+          transition: all 0.5s ease-in-out;
+          cursor: pointer;
+        }
+
+  
+
+    
       .text {
         text-align: center;
         display: grid;
         gap: 8px;
   
       }
+      .some_icons {
+        display: flex;
+        gap: 2rem;
+        margin: 0 auto;
+        cursor: pointer; 
+        svg {
+          width: 24px;
+        }
+      }
+
+      
     }
   }
 </style>

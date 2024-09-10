@@ -4,7 +4,7 @@ import EmployeeCard from "./EmployeeCard.astro";
 const { data } = Astro.props;
 ---
 
-<section class="employees-wrap">
+<section class="wrapper">
   <div class="top">
     <div class="text">
       <h1>Meet Our Great Team</h1>
@@ -27,7 +27,7 @@ const { data } = Astro.props;
 
 <style>
   @layer components {
-      .employees-wrap {
+      .wrapper {
         display: grid;
         gap: 40px;
         margin-bottom: 50px;
