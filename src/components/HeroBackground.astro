@@ -17,16 +17,16 @@ const { surface = 'team', tag, headline } = Astro.props;
 <style>
   @layer components {
     [data-surface="team"] {
-      --background-image: url("../public/images/hero-team.png");  
+      --background-image: url("/public/images/hero-team.png");  
     }
 
     [data-surface="about"] {
-      --background-image: url("../public/images/hero-about.png");  
+      --background-image: url("/public/images/hero-about.png");  
     }
     
  
     [data-surface="case"] {
-      --background-image: url("../public/images/hero-case.png");  
+      --background-image: url("/public/images/hero-case.png");  
     }
     .hero {
             background-image: var(--background-image);

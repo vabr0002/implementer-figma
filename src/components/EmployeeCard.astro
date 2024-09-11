@@ -10,7 +10,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 );
 if (!images[img])
   throw new Error(
-    `"${img}" does not exist in glob: "src/assets/images/*.{jpeg,jpg,png,gif}"`
+    `"${img}" does not exist in glob: "public/images/*.{jpeg,jpg,png,gif}"`
   );
 ---
 
@@ -63,7 +63,7 @@ if (!images[img])
           transition: all 0.5s ease-in-out;
           cursor: pointer;
         }
-        
+
       .text {
         text-align: center;
         display: grid;
