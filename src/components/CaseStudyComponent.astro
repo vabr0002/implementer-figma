@@ -1,0 +1,82 @@
+---
+---
+
+<section class="card">
+    <div class="card-content">
+        <div class="card-text">
+            <div class="text">
+                <p class="font-large">Case Name</p>
+                <p>Taxes & Efficiency</p>
+            </div>
+            <div class="column">
+                <p class="font-large">Category</p>
+                <p>Business</p>
+            </div>
+            <div class="column">
+                <p class="font-large">Date</p>
+                <p>27th September 2022</p>
+            </div>
+        </div>
+        <div class="box-right">
+            <a href="#" class="btn-secondary">Live Preview</a>
+        </div>
+    </div>
+</section>
+
+<style>
+     .card {
+        position: relative;
+        margin-bottom: 40px;
+        background-image: url("/public/images/case-study-card.png");
+            height: 450px;
+            border-radius: 20px;
+           margin: 60px;
+
+        .card-content {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 60px;
+            border-radius: 20px;
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%); 
+            width: 900px; 
+            background: var(--heading-color);
+            color: var(--white-color);
+            .card-text {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 40px;
+                .text {
+                    .font-large {
+                        font-size: 1.25rem;
+                        font-weight: 600;
+                    }   
+                }
+            }
+            .box-right {
+
+            }
+        }
+        @media (width < 600px) {
+            height: 250px;
+            margin-bottom: 375px;
+            .box {
+                width: 100%;
+                flex-direction: column;
+                position: inherit;
+                padding: 20px;
+                text-align: center;
+                top: 260px;
+                .box-left {
+                    grid-template-columns: 1fr;
+                }
+                .box-right {
+                    margin: 20px;
+                }
+            }
+        }
+    } 
+
+</style>
