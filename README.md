@@ -20,7 +20,6 @@ Hvis jeg havde haft et par dage mere, ville jeg gerne have haft færdiggjort for
 # Største udfordringer
 
 Jeg har haft problemer med javascript delen, til at genere single-view siderne. Også er der nogle elementer og billeder der fungere på local hosten som ikke gør på netlify.
-Ville gerne have haft mere tid...
 
 # Konklusion
 
