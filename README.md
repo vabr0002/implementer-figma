@@ -1,35 +1,28 @@
-# Temaopgaven
+# Temaopgaven: Implementer et figmadesign
 
 # Opsumering
 
-Jeg har brugt meget længere tid end jeg havde regnet med bare på at sætte det basale op som baselayout op samt . Jeg har i denne opgave valgt at udfordre mig selv og ikke få hjælp af andre end lidt ChatGPT hist og her. Dette har jeg gjort for at få et realistisk syn på hvor jeg er. Håber resultatet er tilstrækkeligt...
+Jeg har brugt meget længere tid end jeg havde regnet med på nogle meget basale ting som hele opsætningen af mit layout og de gentagende elementer. Jeg har prøvet at arbejde meget selvstændigt med denne opgave for at give mig selv et overblik over hvor langt mine evner rækker, og hvilke mangler jeg har. Jeg har helt klart fundet ud af at jeg har et godt stykke vej endnu, men det skulle jeg vel også gerne have.
 
-Jeg har bikset meget med at få helt basale ting som billeder til at komme frem, og det endelige resultet er ikke hvad jeg havde håbet.
-Jeg er sikker på at mange af de ting jeg har bikset med har en super nem løsning, dette finder jeg forhåbenlig ud af senere hen.
+Jeg har haft problemer med nogle meget basale ting og det spejler sig i det endelige resultet, som ikke er hvad jeg havde håbet.
+Jeg er sikker på at mange af de ting jeg har haft problemer kunne løses på en super simpel måde.
 
-# responsivt
+# Responsivt
 
-Jeg har som sagt bikset meget med nogle "simple" ting, der har taget meget længere tid end forventet, dette har gjort at jeg ikke har haft tid til at gøre det responsivt, hvilket jeg er lettere frustreret med.
+Jeg har ikke har haft tid til at gøre det responsivt, hvilket jeg er lettere frustreret over.
 
 # Ting jeg gerne ville have været i mål med
 
 Jeg ville meget gerne have haft single-view siderne med de enkelte medarbejde til at virke så den trak data fra databasen og generede siderne alt efter hvem man trykkede på, dette nåede jeg dog aldrig i mål med.
 
-Der er mange flere ting jeg gerne ville have haft færdiggjort, men tiden løb fra mig.
+Hvis jeg havde haft et par dage mere, ville jeg gerne have haft færdiggjort forsiden og sat det interaktive elementer, der snakker jeg om scrolling containeren og sectionen med procenterne der skulle animeres.
 
 # Største udfordringer
 
-Jeg har siddet længe med "slug" delen til singleview siderne, derudover har jeg haft problemer med billeder der blev vist i local-hosten, men ikke blev vist når jeg sendte siden live på netlify, dette er jeg sikker på at der er en nem løsning på...sikkert noget med mappestrukturen... Der er en del ting der fungere på local hosten som ikke gør på netlify.
-Udover det, har jeg fået en fejlbesked på mit EmployeeCard som jeg ikke har kunne gennemskue, det er i forbindelse med:
+Jeg har haft problemer med javascript delen, til at genere single-view siderne. Også er der nogle elementer og billeder der fungere på local hosten som ikke gør på netlify.
+Og med tiden, ville gerne have haft et par dage mere...
 
-import type { ImageMetadata } from "astro";
-import { Image } from "astro:assets";
-
-Hvor jeg får beskeden: Cannot find module 'astro' or its corresponding type declaration.
-
-Samme besked på "import(image)". Har ikke kunne finde en løsning på dette..
-
-# konklusion
+# Konklusion
 
 Jeg er løbet ind i mange flere udfordringer end forventet med dette projekt.
 Selvom resultatet slet ikke er som håbet, er jeg dog ikke slået ud og har stadig blod på tanden !
