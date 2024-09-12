@@ -23,5 +23,5 @@ Jeg har haft problemer med javascript delen, til at genere single-view siderne. 
 
 # Konklusion
 
-Jeg er løbet ind i mange flere udfordringer end forventet med dette projekt.
+Jeg er løbet ind i mange flere udfordringer end forventet med dette projekt. Og har arbejdet lidt sporadisk med den, hvor jeg nu ville have fokuseret mere på en del, have lavet den også gået videre. Det ville jeg nok have kommet længere med..
 Selvom resultatet slet ikke er som håbet, er jeg dog ikke slået ud og har stadig blod på tanden !
